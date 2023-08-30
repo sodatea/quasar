@@ -222,7 +222,7 @@ describe('QSelect API', () => {
             .click()
           cy.get('.q-menu')
             .contains('Option 1')
-            .click({ waitForAnimations: true })
+            .click({ waitForAnimations: true, animationDistanceThreshold: 1 })
           cy.get('.q-menu')
             .then(() => {
               expect(fn).to.have.been.calledWith(1)
