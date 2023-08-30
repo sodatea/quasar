@@ -19,5 +19,19 @@
     "vite-ecosystem-ci:test": "yarn workspace @quasar/vite-plugin test",
     "vue-ecosystem-ci:build": "yarn vite-ecosystem-ci:build",
     "vue-ecosystem-ci:test": "yarn workspace quasar test:component:run && yarn workspace @quasar/vite-plugin test:e2e:ci"
+  },
+  "resolutions": {
+    "vue": "npm:@vue/canary",
+    "@vue/compiler-core": "npm:@vue/compiler-core-canary",
+    "@vue/compiler-dom": "npm:@vue/compiler-dom-canary",
+    "@vue/compiler-sfc": "npm:@vue/compiler-sfc-canary",
+    "@vue/compiler-ssr": "npm:@vue/compiler-ssr-canary",
+    "@vue/reactivity": "npm:@vue/reactivity-canary",
+    "@vue/reactivity-transform": "npm:@vue/reactivity-transform-canary",
+    "@vue/runtime-core": "npm:@vue/runtime-core-canary",
+    "@vue/runtime-dom": "npm:@vue/runtime-dom-canary",
+    "@vue/server-renderer": "npm:@vue/server-renderer-canary",
+    "@vue/shared": "npm:@vue/shared-canary",
+    "@vue/compat": "npm:@vue/compat-canary"
   }
 }
