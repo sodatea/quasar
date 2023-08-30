@@ -1,0 +1,21 @@
+name: Test GitHub Actions
+
+on:
+  push:
+    branches:
+      - test-ci-*
+
+jobs:
+  test-ecosystem:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.15
+        id: setup-node
+      - run: corepack enable
+      - run: yarn install
+      - run: vue-ecosystem-ci:build
+      - run: vue-ecosystem-ci:test
