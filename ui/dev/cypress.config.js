@@ -58,6 +58,7 @@ module.exports = defineConfig({
           quasar()
         ]
       }
-    }
+    },
+    waitForAnimations: true
   }
 })
