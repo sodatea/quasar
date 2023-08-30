@@ -14,8 +14,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18.15
-        id: setup-node
+          cache: "yarn"
       - run: corepack enable
       - run: yarn install
-      - run: vue-ecosystem-ci:build
-      - run: vue-ecosystem-ci:test
+      - run: yarn vue-ecosystem-ci:build
+      - run: yarn vue-ecosystem-ci:test
